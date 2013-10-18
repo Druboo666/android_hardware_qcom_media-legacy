@@ -76,7 +76,7 @@ libmm-vdec-inc          += frameworks/native/include/media/hardware
 
 LOCAL_MODULE                    := libOmxVdec
 LOCAL_MODULE_TAGS               := optional
-LOCAL_CFLAGS                    := $(libOmxVdec-def)
+LOCAL_CFLAGS                    := $(libOmxVdec-def) -fno-strict-aliasing
 LOCAL_C_INCLUDES                += $(libmm-vdec-inc)
 
 LOCAL_PRELINK_MODULE    := false
@@ -110,7 +110,7 @@ endif
 
 LOCAL_MODULE                    := mm-vdec-omx-test
 LOCAL_MODULE_TAGS               := optional
-LOCAL_CFLAGS                    := $(libOmxVdec-def)
+LOCAL_CFLAGS                    := $(libOmxVdec-def) -fno-strict-aliasing
 LOCAL_C_INCLUDES                := $(mm-vdec-test-inc)
 
 LOCAL_PRELINK_MODULE      := false
@@ -138,7 +138,7 @@ endif
 
 LOCAL_MODULE                    := mm-video-driver-test
 LOCAL_MODULE_TAGS               := optional
-LOCAL_CFLAGS                    := $(libOmxVdec-def)
+LOCAL_CFLAGS                    := $(libOmxVdec-def) -fno-strict-aliasing
 LOCAL_C_INCLUDES                := $(mm-vdec-drv-test-inc)
 LOCAL_PRELINK_MODULE            := false
 
